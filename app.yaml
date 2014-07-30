@@ -1,0 +1,35 @@
+application: blogsinghakash
+version: 1
+runtime: php
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /
+  script: main.php
+
+- url: /install_ubuntu.php
+  script: install_ubuntu.php
+
+- url: /install_virtualbox.php
+  script: install_virtualbox.php
+
+- url: /install_xampp.php
+  script: install_xampp.php
+
+- url: /tutorials.php
+  script: tutorials.php
+
+- url: /contact.php
+  script: contact.php
+
+- url: /images
+  static_dir: images
+
+- url: /css
+  static_dir: css
+
