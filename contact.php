@@ -29,12 +29,12 @@ $mail = new PHPMailer;
 $mail->isSMTP();
 $mail->Host = 'smtp.gmail.com';
 $mail->SMTPAuth = true;
-$mail->Username = 'ak434640@gmail.com';
-$mail->Password = 'sonaltomar';
+$mail->Username = '';
+$mail->Password = '';
 $mail->SMTPSecure = 'tls';
 $mail->From=test_input($_POST["email"]);
 $mail->FromName=test_input($_POST["name"]);
-$mail->addAddress('ak434640@gmail.com', 'akash singh');
+$mail->addAddress('', 'akash singh');
 $mail->addReplyTo(test_input($_POST["email"]), test_input($_POST["name"]));
 $mail->WordWrap = 50;
 $mail->isHTML(true);
@@ -51,11 +51,7 @@ if(!$mail->send()) {
 
 
 <?php
- /*if(mail("ak434640@gmail.com","Software Development",$query,"From: $email\n")){
- echo "email send";
-}else{
-echo "not send";
-}*/
+
 }
 function test_input($data) {
    $data = trim($data);
